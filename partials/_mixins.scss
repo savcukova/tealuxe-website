@@ -1,0 +1,23 @@
+@import "./variables";
+
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint == biglaptop {
+        @media (max-width: $biglaptop) {
+            @content;
+        }
+    } @else if $breakpoint == laptop {
+        @media (max-width: $laptop) {
+            @content;
+        }
+    } @else if $breakpoint == mobile {
+        @media (max-width: $mobile) {
+            @content;
+        }
+    } @else if $breakpoint == small {
+        @media (max-width: $small) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint `#{$breakpoint}` is not defined.";
+    }
+}

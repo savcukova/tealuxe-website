@@ -1,0 +1,137 @@
+footer {
+    background-color: $accent-color;
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include breakpoint(laptop){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products{
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        p{
+            font-size: 20px;
+            padding-bottom: 50px;
+            font-family: "Playfair Display", sans-serif;
+
+            @include breakpoint(laptop){
+                font-size: 16px;
+            }
+        }
+
+        .list{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include breakpoint(laptop){
+                font-size: 12px;
+            }
+        }
+    }
+
+    .quote-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        height: 100%;
+
+        .main-quote {
+            font-style: italic;
+            font-family: "Playfair Display", sans-serif;
+
+            @include breakpoint(laptop){
+                font-size: 14px;
+            }
+
+            @include breakpoint(laptop){
+                font-size: 10px;
+            }
+        }
+
+        .quote-author{
+            font-size: 13px;
+            padding-top: 20px;
+            color: rgb(97, 97, 97);
+
+            @include breakpoint(laptop){
+                font-size: 10px;
+            }
+        }
+    }
+
+    .stay-in-touch{
+        padding-top: 50px;
+
+        .title4{
+            font-size: 20px;
+            padding-bottom: 50px;
+            font-family: "Playfair Display", sans-serif;
+
+            @include breakpoint(laptop){
+                font-size: 16px;
+            }
+        }
+
+        .text-touch {
+            font-size: 14px;
+
+            @include breakpoint(laptop){
+                font-size: 10px;
+            }
+        }
+
+        .contacts{
+            display: grid;
+            grid-template-areas: "logo email email"
+            "logo phone phone";
+            gap: 20px;
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            @include breakpoint(laptop){
+                gap: 8px;
+            }
+
+            .tealuxe{
+                grid-area: logo;
+            }
+
+            .contact-us1{
+                grid-area: email;
+                display: flex;
+                align-items: flex-end;
+                gap: 10px;
+            }
+
+            .contact-us2{
+                grid-area: phone;
+            }
+
+            a{
+                color: $primary-color;
+
+                @include breakpoint(laptop){
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .socials{
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+}
